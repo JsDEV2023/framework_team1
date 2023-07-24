@@ -1,0 +1,64 @@
+.pagination {
+    display: flex;
+}
+
+.pagination__btn {
+    padding: 10px 15px;
+    border: 1px solid black;
+    border-right: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .1s;
+
+    &.dark {
+        border-color: white;
+        color: white;
+        transition: all .1s;
+        svg path {
+            fill: white;
+        }
+    }
+
+    &.active {
+        background-color: black;
+        color: white;
+        &.dark {
+            background-color: white;
+            color: black;
+        }
+    }
+}
+
+
+.pagination__btn_reverse {
+    transform: rotate(180deg);
+    border-left: none;
+    border-right: 1px solid black;
+
+}
+
+.first, .end {
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+.end {
+    border-right: 1px solid black;
+}
+
+.disabled {
+    border-color: rgba(0, 0, 0, 0.3);
+    cursor: default;
+    svg path {
+        fill: rgba(0, 0, 0, 0.3);
+    }
+
+    &.dark {
+        border-color: rgba(255, 255, 255, 0.3);
+        svg path {
+            fill: rgba(255, 255, 255, 0.3);
+        }
+    }
+}
